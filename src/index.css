@@ -1,13 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Volkhov&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Poppins","Volkhov" ,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.bg-holder {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  min-height: 100%;
+  top: -17rem;
+  right: 0;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  will-change: transform, opacity, filter;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.bg-holder.bg-right {
+  right: auto;
+  left: 0;
+}
+
+.bg-holder.overlay:before {
+  position: absolute;
+  content: "";
+  background: rgba(0, 0, 0, 0.25);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
